@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ponterest{% endblock %}
+
+{% block body %}
+    <h1>{{ pluralize(pins| length, 'Pin') }}</h1>
+
+    {% for pin in pins %}
+        <article>
+            <h1>{{ pin.title }}</h1>
+            <p>{{ pin.description }}</p>
+        </article>
+    {% else %}
+        <p>Désolé, pas de Pins disponible pour le moment !</p>
+    {% endfor %}
+
+{% endblock %}
