@@ -8,8 +8,10 @@
     {% for pin in pins %}
         <article>
             <h1><a href="{{ path('app_pins_show', {id: pin.id}) }}">{{ pin.title }}</a></h1>
-            <p>{{ pin.description }}</p>
+            <p>{{ pin.description|u.truncate(10, '...', false) }}</p>
+            <p>Publié il y a {{ pin.createdAt|ago }}</p>
         </article>
+    
     {% else %}
         <p>Désolé, pas de Pins disponible pour le moment !</p>
     {% endfor %}
