@@ -9,8 +9,7 @@
     </article>
 
     <a href="{{ path('app_pins_edit', {id: pin.id}) }}">Éditer</a> |
-    <a href="#" onclick="event.preventDefault(); confirm('Êtes-vous sûr ?') && document.getElementById('js-pin-delete-form').submit();">Supprimer</a> |
-    <a href="{{ path('app_home') }}">Retour</a>
+    <a href="#" onclick="event.preventDefault(); confirm('Êtes-vous sûr ?') && document.getElementById('js-pin-delete-form').submit();">Supprimer</a>
 
     <form id="js-pin-delete-form" action="{{ path('app_pins_delete', {id: pin.id}) }}" method="post" style="display : none;">
         <input type="hidden" name="_method" value="DELETE">
