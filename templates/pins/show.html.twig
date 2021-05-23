@@ -17,7 +17,7 @@
 
                 <p class="text-muted px-3 pb-3">
                     <small>Publié
-                        <time datetime="{{pin.createdAt|date('Y-m-d H:i:s')}}"> {{ pin.createdAt|ago }}</time> par [OWNER FULL NAME]
+                        <time datetime="{{pin.createdAt|date('Y-m-d H:i:s')}}"> {{ pin.createdAt|ago }}</time> par {{ pin.user.fullName }}
                     </small>
                 </p>
 
