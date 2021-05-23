@@ -14,7 +14,7 @@ class AppExtension extends AbstractExtension
         ];
     }
 
-    public function doSomething(int $count, string $singular, ?string $plural = null) : string
+    public function pluralize(int $count, string $singular, ?string $plural = null) : string
     {
         $plural ??= $singular . 's';
         $str = $count === 1 ? $singular : $plural;
